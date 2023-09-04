@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+
+OLD_IFS="$IFS"
+IFS=""
+
+disks=$(sudo fdisk -l | grep -E "^Disk /dev/[A-Za-z0-9]+")
+echo $disks | cut -d ',' -f 1
+
+IFS="$OLD_IFS"

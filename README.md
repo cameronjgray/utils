@@ -9,3 +9,11 @@ Displays the current battery status to the command line. Useful for working on a
 ```sh
 $ battery
 ```
+
+## Disks
+
+Displays a simple, short list of the disks on a system. Uses `fdisk` and will require `sudo` permissions. Command:
+
+```sh
+$ disks
+```
