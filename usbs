@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+OLD_IFS="$IFS"
+IFS=""
+
+usbs=$(lsusb | cut -d ' ' -f 7-)
+
+echo $usbs
+
+IFS="$OLD_IFS"
