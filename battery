@@ -1,0 +1,7 @@
+#/usr/bin/bash
+
+state=$(upower -i `upower -e | grep 'BAT'` | grep state | tr -s  ' ' | cut -d' ' -f 3)
+percentage=$(upower -i `upower -e | grep 'BAT'` | grep percentage | tr -s  ' ' | cut -d' ' -f 3)
+time=$(upower -i `upower -e | grep 'BAT'` | grep 'time to' | tr -s  ' ' | cut -d' ' -f 5,6)
+
+echo $state $percentage $time
