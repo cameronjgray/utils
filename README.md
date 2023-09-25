@@ -1,6 +1,6 @@
 # Utils
 
-Simply and useful utilities when working at the command line. Adds commands that simplify output of other commands for easy reading. Add this directory to your `$PATH` and use the commands below.
+Simple and useful utilities when working at the command line. Adds commands that simplify output of other commands for easy reading. Add this directory to your `$PATH` and use the commands below.
 
 ## Battery Status
 
