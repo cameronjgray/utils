@@ -25,3 +25,18 @@ Displays a list of the USB devices using `lsusb`. Command:
 ```sh
 $ usbs
 ```
+
+## ep
+
+This is a utility for hitting endpoints. The underlying technology runs on cURL.
+
+### Setup
+Execute within `utils` directory
+```sh
+$ mkdir -p endpoints/example-endpoint
+$ echo "curl --get -w '\n' https://catfact.ninja/fact" > endpoints/example-endpoint/example
+```
+and then to test it out:
+```sh
+$ ep example-endpoint example
+```
