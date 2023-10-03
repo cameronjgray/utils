@@ -1,0 +1,19 @@
+#!/bin/bash
+
+working_dir=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
+if [ $# -eq 2 ]; then
+    endpoint=$working_dir/endpoints/$1
+    variant=$endpoint/$2
+    if [ -d $endpoint ]; then
+        if [ -e $variant ]; then
+            . $variant
+        else
+            echo "Variant: $2 on endpoint ($1) does not exist"
+        fi
+    else
+        echo "Endpoint: $1 does not exist"
+    fi
+else
+    echo "Usage: $ ep ENDPOINT VARIANT"
+fi
