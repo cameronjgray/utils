@@ -1,0 +1,29 @@
+#!/bin/bash
+
+ringring() {
+  while [ 1 -eq 1 ]
+  do
+    echo -e "\aTimer done!"
+    sleep 1
+  done
+}
+
+if [ $# -eq 1 ]; then
+  if [ "$1" -eq "$1" ] &> /dev/null; then
+    sleep $1
+    ringring
+  else
+    echo "Please enter a number"
+  fi
+elif [ $# -eq 2 ]; then
+  if [ $1 = "-m" ]; then
+    sleep $2m
+    ringring
+  elif [ $1 = "-h" ]; then
+    sleep $2h
+  else
+    echo "Usage: timer [-m|-h] NUMBER"
+  fi
+else
+  echo "Usage: timer SECONDS"
+fi
