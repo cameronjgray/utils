@@ -40,3 +40,18 @@ and then to test it out:
 ```sh
 $ ep example-endpoint example
 ```
+
+## timer
+
+Simple timer utility that uses the terminal bell as an alarm. For a 10 second timer:
+```sh
+$ timer 10
+```
+For a 10 minute timer
+```sh
+$ timer -m 10
+```
+For a 10 hour timer
+```sh
+$ timer -h 10
+```
